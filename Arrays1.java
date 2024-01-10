@@ -3,7 +3,15 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class Arrays1 {
-    public static void index(Integer[] array){
+    public static void zero(Integer[] array1) {
+        System.out.print("Количество 0 в массиве: ");
+        for (int i = 0; i < array1.length; i++) {
+            if (array1[i] == 0) {
+                System.out.print(" " + array1[i]);
+            }
+        }
+    }
+    public static void index(Integer[] array) {
         int maxIndex = 0;
         int minIndex = 0;
         for (int i = 1; i < array.length; i++) {
@@ -30,7 +38,6 @@ public class Arrays1 {
         System.out.println("Минимальный элемент массива: " + min);
         System.out.println("Максимальный элемент массива: " + max);
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите размерность первого массива: ");
@@ -47,6 +54,8 @@ public class Arrays1 {
         System.out.println("Массив с ручным типом ввода:");
         System.out.println(Arrays.toString(arr1));
         index(arr1);
+        zero(arr1);
+        System.out.println();
         Arrays.sort(arr1);
         System.out.println(Arrays.toString(arr1));
         Arrays.sort(arr1, Collections.reverseOrder());
@@ -61,11 +70,12 @@ public class Arrays1 {
         System.out.println("Массив со случайным типом ввода:");
         System.out.println(Arrays.toString(arr));
         index(arr);
+        zero(arr);
+        System.out.println();
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
         Arrays.sort(arr, Collections.reverseOrder());
         System.out.println(Arrays.toString(arr));
         maxMin(arr);
     }
-
 }
