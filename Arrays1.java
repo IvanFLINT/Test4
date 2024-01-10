@@ -52,7 +52,7 @@ public class Arrays1 {
         Arrays.sort(arr1, Collections.reverseOrder());
         System.out.println(Arrays.toString(arr1));
         maxMin(arr1);
-        System.out.println("----------------------------");
+        System.out.println("----------------------------------");
         for (int i = 0; i < arr.length; i++) {
             double d = Math.random() * 100;
             int resalt = (int) Math.round(d);
