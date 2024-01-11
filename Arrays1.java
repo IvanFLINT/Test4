@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class Arrays1 {
-    public static void insert(Integer[] array2){
+    public static void insert(Integer[] array2) {
         System.out.println();
         System.out.println("Сортировка:");
         Arrays.sort(array2);
@@ -11,6 +11,17 @@ public class Arrays1 {
         Arrays.sort(array2, Collections.reverseOrder());
         System.out.println(Arrays.toString(array2));
     }
+
+    public static void sorting(Integer[] array3) {
+        for (int i = 0; i < array3.length / 2; i++) {
+            int temp = array3[i];
+            array3[i] = array3[array3.length - 1 - i];
+            array3[array3.length - 1 - i] = temp;
+        }
+        System.out.println("Замена местами элементов первый и последний, второй и предпоследний и т.д.");
+        System.out.println(Arrays.toString(array3));
+    }
+
     public static void zero(Integer[] array1) {
         int zeroIndex = -1;
         for (int i = 0; i < array1.length; i++) {
@@ -23,6 +34,21 @@ public class Arrays1 {
             System.out.println("Нулевой элемент не найден");
         } else {
             System.out.println("Нулевой элемент найден в позиции: " + zeroIndex);
+        }
+    }
+
+    public static void increasing(Integer[] array4) {
+        boolean temp = true;
+        for (int i = 0; i < array4.length - 1; i++) {
+            if (array4[i] > array4[i + 1]) {
+                temp = false;
+                break;
+            }
+        }
+        if (temp == true) {
+            System.out.println("Массив возростающий.");
+        } else {
+            System.out.println("Массив не являеться возростающим.");
         }
     }
 
@@ -72,8 +98,10 @@ public class Arrays1 {
         System.out.println(Arrays.toString(arr1));
         index(arr1);
         zero(arr1);
+        increasing(arr1);
         maxMin(arr1);
         insert(arr1);
+        sorting(arr1);
         System.out.println("----------------------------------");
         for (int i = 0; i < arr.length; i++) {
             double d = Math.random() * 100;
@@ -84,7 +112,9 @@ public class Arrays1 {
         System.out.println(Arrays.toString(arr));
         index(arr);
         zero(arr);
+        increasing(arr);
         maxMin(arr);
         insert(arr);
+        sorting(arr);
     }
 }
