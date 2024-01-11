@@ -4,13 +4,20 @@ import java.util.Collections;
 
 public class Arrays1 {
     public static void zero(Integer[] array1) {
-        System.out.print("Количество 0 в массиве: ");
+        int zeroIndex = -1;
         for (int i = 0; i < array1.length; i++) {
             if (array1[i] == 0) {
-                System.out.print(" " + array1[i]);
+                zeroIndex = i;
+                break;
             }
         }
+        if (zeroIndex == -1) {
+            System.out.println("Нулевой элемент не найден");
+        } else {
+            System.out.println("Нулевой элемент найден в позиции: " + zeroIndex);
+        }
     }
+
     public static void index(Integer[] array) {
         int maxIndex = 0;
         int minIndex = 0;
@@ -24,6 +31,7 @@ public class Arrays1 {
         System.out.println("Индекс максимального элементы массива: " + maxIndex);
         System.out.println("Индекс минимального элементы массива: " + minIndex);
     }
+
     public static void maxMin(Integer[] arrey) {
         int max = arrey[0];
         int min = arrey[0];
@@ -38,6 +46,7 @@ public class Arrays1 {
         System.out.println("Минимальный элемент массива: " + min);
         System.out.println("Максимальный элемент массива: " + max);
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите размерность первого массива: ");
