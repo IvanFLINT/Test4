@@ -6,11 +6,11 @@ public class Arrays2 {
         String str = String.join("", st);
         int r = Integer.parseInt(str) + 1;
         String st1 = Integer.toString(r);
-        char[] charArray = st1.toCharArray();
-        int[] intArray = new int[charArray.length];
-        for (int i = 0; i < charArray.length; i++) {
-            intArray[i] = Character.getNumericValue(charArray[i]);
+        char[] char1 = st1.toCharArray();
+        int[] int1 = new int[char1.length];
+        for (int i = 0; i < char1.length; i++) {
+            int1[i] = Character.getNumericValue(char1[i]);
         }
-        System.out.println(Arrays.toString(intArray));
+        System.out.println(Arrays.toString(int1));
     }
 }
