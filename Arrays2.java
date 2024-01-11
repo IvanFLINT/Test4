@@ -2,9 +2,12 @@ import java.util.Arrays;
 
 public class Arrays2 {
     public static void main(String[] args) {
-        String[] st = {"1", "4", "0", "5", "6", "3"};
-        String str = String.join("", st);
-        int r = Integer.parseInt(str) + 1;
+        int [] arr = {1, 4, 0, 5, 6, 3};
+        int temp = 0;
+        for (int i : arr) {
+            temp = 10 * temp + i;
+        }
+        int r = temp + 1;
         String st1 = Integer.toString(r);
         char[] char1 = st1.toCharArray();
         int[] int1 = new int[char1.length];
