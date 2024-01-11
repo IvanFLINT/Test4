@@ -3,6 +3,14 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class Arrays1 {
+    public static void insert(Integer[] array2){
+        System.out.println();
+        System.out.println("Сортировка:");
+        Arrays.sort(array2);
+        System.out.println(Arrays.toString(array2));
+        Arrays.sort(array2, Collections.reverseOrder());
+        System.out.println(Arrays.toString(array2));
+    }
     public static void zero(Integer[] array1) {
         int zeroIndex = -1;
         for (int i = 0; i < array1.length; i++) {
@@ -64,12 +72,8 @@ public class Arrays1 {
         System.out.println(Arrays.toString(arr1));
         index(arr1);
         zero(arr1);
-        System.out.println();
-        Arrays.sort(arr1);
-        System.out.println(Arrays.toString(arr1));
-        Arrays.sort(arr1, Collections.reverseOrder());
-        System.out.println(Arrays.toString(arr1));
         maxMin(arr1);
+        insert(arr1);
         System.out.println("----------------------------------");
         for (int i = 0; i < arr.length; i++) {
             double d = Math.random() * 100;
@@ -80,11 +84,7 @@ public class Arrays1 {
         System.out.println(Arrays.toString(arr));
         index(arr);
         zero(arr);
-        System.out.println();
-        Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr));
-        Arrays.sort(arr, Collections.reverseOrder());
-        System.out.println(Arrays.toString(arr));
         maxMin(arr);
+        insert(arr);
     }
 }
