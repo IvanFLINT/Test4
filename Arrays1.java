@@ -94,6 +94,7 @@ public class Arrays1 {
             int c = sc.nextInt();
             arr1[j] = c;
         }
+        sc.close();
         System.out.println("Массив с ручным типом ввода:");
         System.out.println(Arrays.toString(arr1));
         index(arr1);
